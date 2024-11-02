@@ -33,4 +33,3 @@ Ensure you have **Python 3** installed and updated.
 
 ## 📄 License
 Distributed under the GPL-3.0 License. See the `LICENSE` file for more details.
-```
