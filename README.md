@@ -22,7 +22,7 @@ Ensure you have **Python 3** installed and updated.
 
 ---
 
-> **Note:** This keylogger operates in the background and records keystrokes discreetly.
+> **Note:** This keylogger operates in the background (still needing the terminal opened, but you can hide it) and records keystrokes discreetly.
 
 ---
 
